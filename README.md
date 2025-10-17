@@ -45,10 +45,12 @@
 
 #### 1.1 视觉模型
 
-* ChatGLM：
-  * 地址：https://github.com/THUDM/ChatGLM-6B
-    ![](https://img.shields.io/github/stars/THUDM/ChatGLM-6B.svg)
-  * 简介：中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约 1T 标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持
+
+* GPFEM-2025.09-港科大：
+  * 论文：A generalizable pathology foundation model using a unified knowledge distillation pretraining framework
+  * 地址：https://github.com/birkhoffkiki/GPFM/
+    ![](https://img.shields.io/github/stars/THUDM/GPFM.svg)
+  * 简介：效果碾压UNI、CHIEF等大模型？港科大发布更通用的病理基础模型！统一知识蒸馏策略横扫72项任务！
 
 #### 1.2 多模态模型
 

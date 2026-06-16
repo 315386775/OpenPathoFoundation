@@ -1,108 +1,104 @@
 </h1>
 <div align="center">
-    <h1>Awesome Open PathoFoundation</h1>
+    <h1>🧬 PathoAI-Hub</h1>
+    <p><strong>计算病理学开源生态入口</strong></p>
+    <p>聚合 · 导览 · 连接 —— 帮你在最短时间内找到针对某个任务应该用什么模型、工具、数据</p>
 </div>
 
 <p align="center">
-<font face="黑体" color=orange size=5"> 收集和梳理病理AI大模型相关 </font>
+  <a href="https://github.com/315386775/OpenPathoFoundation/stargazers"><img src="https://img.shields.io/github/stars/315386775/OpenPathoFoundation.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/315386775/OpenPathoFoundation/issues"><img src="https://img.shields.io/github/issues/315386775/OpenPathoFoundation.svg?style=popout-square" alt="GitHub issues"></a>
+  <a href="https://github.com/315386775/OpenPathoFoundation/forks"><img src="https://img.shields.io/github/forks/315386775/OpenPathoFoundation.svg?style=popout-square" alt="GitHub forks"></a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/315386775/OpenPathoFoundation/stargazers"> <img src="https://img.shields.io/github/stars/315386775/OpenPathoFoundation.svg?style=popout-square" alt="GitHub stars"></a>
-  <a href="https://github.com/315386775/OpenPathoFoundation/issues"> <img src="https://img.shields.io/github/issues/315386775/OpenPathoFoundation.svg?style=popout-square" alt="GitHub issues"></a>
-  <a href="https://github.com/315386775/OpenPathoFoundation/forks"> <img src="https://img.shields.io/github/forks/315386775/OpenPathoFoundation.svg?style=popout-square" alt="GitHub forks"></a>
-</p>
+---
 
-本项目旨在收集和梳理计算病理学中病理基础模型（PFMs）及大型视觉-语言模型（LVLMs）等相关的开源模型、应用、数据集及教程等资料！
+## 🎯 我们的愿景
 
-如果本项目能给您带来一点点帮助，麻烦点个⭐️吧～同时也欢迎大家贡献本项目未收录的开源模型、应用、数据集等。
+GitHub 上病理AI的优秀开源项目已经很多，但分散在不同仓库、不同团队手中。**PathoAI-Hub 的价值在于"入口"而非"仓库"**——我们帮你筛选、分类、对比，让你在最短时间内找到所需资源并开始使用。
+
+如果本项目能给您带来一点点帮助，麻烦点个 ⭐️ 吧～同时也欢迎大家贡献本项目未收录的开源模型、应用、数据集等。
 
 ![Open PathoFoundation](assets/model.png)
 
-常见底座模型细节概览：
-| 底座     | 包含模型                    | 模型参数大小      | 训练token数  | 训练最大长度 | 是否可商用 |
-|----------|---------------------------|-----------------|-------------|------------|-------   |
-| ChatGLM  | ChatGLM/2/3/4 Base&Chat   | 6B              | 1T/1.4      | 2K/32K     | 可商用   |
-| LLaMA    | LLaMA/2/3 Base&Chat       | 7B/8B/13B/33B/70B | 1T/2T       | 2k/4k      | 部分可商用  |
-| Baichuan | Baichuan/2 Base&Chat      | 7B/13B          | 1.2T/1.4T | 4k     | 可商用   |
-| Qwen     | Qwen/1.5/2/2.5 Base&Chat&VL   | 7B/14B/32B/72B/110B | 2.2T/3T/18T      | 8k/32k     | 可商用   |
-| InternLM | InternLM/2/2.5 Base/Chat/VL   | 7B/20B          | -         | 200k | 可商用 |
-| DeepSeek | Base&Chat                 | 1.3B/7B/33B/67B | -         | 4k | 可商用 |
+---
 
-## 目录
+## 📚 四大核心板块
 
-- [目录](#目录)
-  - [1. 模型](#1-模型)
-    - [1.1 视觉模型](#11-视觉模型)
-    - [1.2 多模态模型](#12-多模态模型)
-  - [2. 应用](#2-应用)
-    - [2.1 医疗垂直领域微调](#21-医疗垂直领域微调)
-  - [3. 数据集](#3-数据集)
-    - [预训练数据集](#预训练数据集)
-    - [SFT数据集](#sft数据集)
+### 🏆 [模型ZOO — 选型指南](model-zoo/)
 
-### 1. <a name='模型'></a>模型
+> "我的任务该用哪个模型？一张表告诉你答案。"
 
-#### 1.1 视觉模型
+**你能在这里找到：**
+- 🔬 UNI、Virchow、CONCH、RuiPath 等 **10+** 开源病理基础模型
+- 📊 可横向对比的模型总表：参数量、训练数据、架构、开源情况一目了然
+- 🎯 按场景推荐：通用特征提取 → UNI · 大参数泛化 → Virchow · 多模态推理 → CONCH · 中国人群 → RuiPath
 
+[→ 进入模型ZOO，找到你的模型 →](model-zoo/)
 
-* GPFEM-2025.09-港科大：
-  * 论文：A generalizable pathology foundation model using a unified knowledge distillation pretraining framework
-  * 地址：https://github.com/birkhoffkiki/GPFM/
-    ![](https://img.shields.io/github/stars/THUDM/GPFM.svg)
-  * 简介：效果碾压UNI、CHIEF等大模型？港科大发布更通用的病理基础模型！统一知识蒸馏策略横扫72项任务！
+---
 
-#### 1.2 多模态模型
+### 🛠 [实用工具 & Demo — 开箱即用](tools-demo/)
 
-* VisualGLM-6B
-  
-  * 地址：https://github.com/THUDM/VisualGLM-6B
-    ![](https://img.shields.io/github/stars/THUDM/VisualGLM-6B.svg)
-  * 简介：一个开源的，支持图像、中文和英文的多模态对话语言模型，语言模型基于 ChatGLM-6B，具有 62 亿参数；图像部分通过训练 BLIP2-Qformer 构建起视觉模型与语言模型的桥梁，整体模型共78亿参数。依靠来自于 CogView 数据集的30M高质量中文图文对，与300M经过筛选的英文图文对进行预训练。
+> "不需要从头造轮子，这里有你需要的全流程工具。"
 
-### 2. <a name='应用'></a>应用
+**你能在这里找到：**
+- 🖥 **全流程平台**：QuPath、HistoColAi、ASAP —— 无需编程即可上手
+- 🏷 **AI标注工具**：nuclei.io 将诊断时间从 209 秒缩短至 **79 秒**（-62%）
+- 🐍 **开发框架**：TIAToolbox、PathML、CLAM —— Python 接口，灵活构建
+- 🔬 **细胞分析**：HoVerNet-PanNuke、StarDist 开箱即用
 
-#### 2.1 医疗垂直领域微调
+[→ 进入工具库，发现趁手利器 →](tools-demo/)
 
-* XrayGLM，首个会看胸部X光片的中文多模态医学大模型：
-  
-  * 地址：https://github.com/WangRongsheng/XrayGLM
-    ![](https://img.shields.io/github/stars/WangRongsheng/XrayGLM.svg)
-  * 简介：该项目为促进中文领域医学多模态大模型的研究发展，发布了XrayGLM数据集及模型，其在医学影像诊断和多轮交互对话上显示出了非凡的潜力。
+---
 
+### 📖 [前沿论文 — 风向标](papers/)
 
-* MedicalGPT
-  
-  * 地址：https://github.com/shibing624/MedicalGPT
-    ![](https://img.shields.io/github/stars/shibing624/MedicalGPT.svg)
-  * 简介：训练医疗大模型，实现包括二次预训练、有监督微调、奖励建模、强化学习训练。发布中文医疗LoRA模型shibing624/ziya-llama-13b-medical-lora，基于Ziya-LLaMA-13B-v1模型，SFT微调了一版医疗模型，医疗问答效果有提升，发布微调后的LoRA权重。
+> "站在技术最前沿，看清病理AI的下一步走向。"
 
-* CareGPT
-  
-  * 地址：https://github.com/WangRongsheng/CareGPT
-    ![](https://img.shields.io/github/stars/WangRongsheng/CareGPT.svg)
-  * 简介：该项目开源了数十个公开可用的医疗微调数据集和开放可用的医疗大语言模型，包含LLM的训练、测评、部署等以促进医疗LLM快速发展。
+**你能在这里找到：**
+- 🔥 **病理基础模型**：UNI、Virchow、CONCH、GPFM 等核心论文追踪
+- 🧬 **多模态融合**：病理+基因组/转录组联合分析最新进展
+- 🏥 **临床转化**：从实验室到诊室，真实临床验证研究
+- 🔗 **与模型ZOO双向联动**：ZOO新增模型 → 论文同步解读；论文宏观趋势 → 反哺模型选型理解
 
-* DISC-MedLLM
-  
-  * 地址：https://github.com/FudanDISC/DISC-MedLLM
-    ![](https://img.shields.io/github/stars/FudanDISC/DISC-MedLLM.svg)
-  * 简介：该项目是由复旦大学发布的针对医疗健康对话式场景而设计的医疗领域大模型与数据集，该模型由DISC-Med-SFT数据集基于Baichuan-13B-Base指令微调得到。
+[→ 进入论文库，把握技术脉搏 →](papers/)
 
-* WiNGPT
-  
-  * 地址：https://github.com/winninghealth/WiNGPT2
-    ![](https://img.shields.io/github/stars/winninghealth/WiNGPT2.svg)
-  * 简介：WiNGPT是一个基于GPT的医疗垂直领域大模型，基于Qwen-7b1作为基础预训练模型，在此技术上进行了继续预训练，指令微调等，该项目具体开源了WiNGPT2-7B-Base与WiNGPT2-7B-Chat模型。
+---
 
-### 3. <a name='数据集'></a>数据集
+### 📊 [数据与基准 — 评测基石](data-benchmarks/)
 
-#### 预训练数据集
+> "没有好数据，再强的模型也是空中楼阁。"
 
-#### SFT数据集
+**你能在这里找到：**
+- 🗂 **6+** 高质量病理数据集：从 PatchCamelyon（32万张图像）到 RuiPath（700张WSI / 7癌种）
+- 🏅 标准化基准测试：公平对比算法性能，验证模型泛化能力
+- 📋 清晰获取方式：公开下载 / 申请获取，许可条款一目了然
+- ⚠️ 使用注意事项：CC-BY-NC-ND 等限制性许可提醒
 
-* Chinese medical dialogue data：
-  
-  * 地址：https://github.com/Toyhom/Chinese-medical-dialogue-data
-    ![](https://img.shields.io/github/stars/Toyhom/Chinese-medical-dialogue-data.svg)
-  * 数据集说明：中文医疗对话数据集，包括：<Andriatria_男科> 94596个问答对 <IM_内科> 220606个问答对 <OAGD_妇产科> 183751个问答对 <Oncology_肿瘤科> 75553个问答对 <Pediatric_儿科> 101602个问答对 <Surgical_外科> 115991个问答对 总计 792099个问答对。
+[→ 进入数据馆，找到评测基石 →](data-benchmarks/)
+
+---
+
+## 🚀 快速开始
+
+- **🔬 病理医生**：从 [实用工具](tools-demo/) 的 QuPath 或 HistoColAi 开始，无需编程，开箱即用
+- **💻 AI研究员**：从 [模型ZOO](model-zoo/) 选预训练模型，用 [数据与基准](data-benchmarks/) 的数据集微调评测
+- **📋 产品经理/决策者**：从 [前沿论文](papers/) 把握技术趋势，从 [数据与基准](data-benchmarks/) 评估技术成熟度
+
+---
+
+## 🤝 贡献指南
+
+我们持续收集优质开源资源。欢迎通过 Issue 或 PR 提交：
+
+- 新发布的病理基础模型（附论文链接和开源地址）
+- 病理AI开源工具/平台
+- 病理相关数据集（附获取方式和使用条款）
+- 前沿论文解读
+
+---
+
+## 📄 许可
+
+本仓库的元数据（资源索引）采用 [MIT License](LICENSE)。各资源本身的许可请参考其各自的 License 声明。部分数据集（如 RuiPath Benchmark）采用 CC-BY-NC-ND 等限制性许可，使用时请遵守对应条款。
